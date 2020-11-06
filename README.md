@@ -30,13 +30,13 @@ Team Project
 
   `EC2` `RDS`
 
-
 <br>
-## 프로젝트 설정 파일
+
+   ## 프로젝트 설정 파일
 * pom.xml ( Maven 빌드 도구 설정 ) 
     * /pom.xml 
     * [view-source](https://github.com/clachic00/ProjectPlanit/blob/main/Planit/Planit/pom.xml)
-    * web.xml ( Project 설정 )
+* web.xml ( Project 설정 )
     * /src/main/webapp/WEB-INF/web.xml      
     * [view-source](https://github.com/clachic00/ProjectPlanit/blob/main/Planit/Planit/src/main/webapp/WEB-INF/web.xml)
 * root-context.xml ( Spring container 설정 ) 
@@ -45,9 +45,6 @@ Team Project
 * servlet-context.xml ( Spring MVC Container 설정 ) 
     * /src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
     * [view-source](https://github.com/clachic00/ProjectPlanit/blob/main/Planit/Planit/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml)
-
-    
-    
     
     
     
