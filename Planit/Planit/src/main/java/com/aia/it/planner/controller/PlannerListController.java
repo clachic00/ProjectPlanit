@@ -20,8 +20,5 @@ public class PlannerListController {
 		
 		return "planner/plannerList";
 	}
-	
 
-	
-	
 }

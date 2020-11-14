@@ -19,7 +19,6 @@ public class PlannerRestController {
 
 	@Autowired
 	PlannerListService listService;
-	
 	@Autowired
 	PlannerDeleteService deleteService;
 	
@@ -27,24 +26,9 @@ public class PlannerRestController {
 	public List<Planner> getPlannerList (
 			@PathVariable("uidx") int uidx
 								) {
-		
 		System.out.println("uidx : "+uidx );
-		
-		
 		return listService.plannerList(uidx);
 	}
-	
-	@GetMapping
-	public List<Planner> getPlannerListAdmin(){
-		
-		System.out.println("RestController for admin");
-
-	
-		return listService.plannerListAdmin();
-	}
-	
-	
-	
 	
 	@DeleteMapping("/{pidx}")
 	public int delete(
@@ -52,8 +36,5 @@ public class PlannerRestController {
 			) {
 		return deleteService.deleteMember(pidx);
 	}
-	
-	
-	
 	
 }

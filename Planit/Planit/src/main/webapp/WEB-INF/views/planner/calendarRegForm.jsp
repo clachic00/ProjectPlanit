@@ -42,15 +42,6 @@
 input:focus {outline:none;}
 input:focus::-webkit-input-placeholder {color:transparent; }
 
-
-
-
-
-
-
-
-
-
 #datechk {
     display: none; 
 }

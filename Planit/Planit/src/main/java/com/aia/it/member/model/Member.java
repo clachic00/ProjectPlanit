@@ -23,8 +23,6 @@ public class Member {
 		getRandomString();
 	}
 
-	
-
 	public Member(int uidx, String uid, String upw, String uname, String uphonenum, String uphoto, String ucode,
 			 Date uregdate) {
 		this.uidx = uidx;
