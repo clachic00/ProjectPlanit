@@ -16,7 +16,7 @@
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
 			<bean id="loggerInterceptor"
-				class="com.aia.it.common.logger.LoggerInterceptor"></bean>
+				class="first.common.logger.LoggerInterceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>
 	<bean
@@ -24,13 +24,25 @@
 	<bean
 		class="org.springframework.web.servlet.view.BeanNameViewResolver"
 		p:order="0" />
-	<bean id="jsonView"
-		class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+	<!-- <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" 
+		/> -->
 	<bean
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver"
 		p:order="1"
 		p:viewClass="org.springframework.web.servlet.view.JstlView"
-		p:prefix="/WEB-INF/jsp/" p:suffix=".jsp">
+		p:prefix="/WEB-INF/views/" p:suffix=".jsp">
 	</bean>
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <property name="dataSource" ref="dataSource" />
+    <property name="mapperLocations" value="classpath*:sample/config/mappers/**/*.xml" />
+</bean>
+<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <property name="dataSource" ref="dataSource" />
+    <property name="mapperLocations" value="classpath*:sample/config/mappers/**/*.xml" />
+</bean>
+
+<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+    <constructor-arg index="0" ref="sqlSession"/>
+</bean> 
 </beans>
 

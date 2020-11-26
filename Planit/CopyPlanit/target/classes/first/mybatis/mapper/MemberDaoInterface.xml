@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="first.member.dao.MemberDaoInterface">
+
+
+<!-- 회원 저장 -->
+<insert id="insertMember"
+	parameterType="first.member.model.Member" 
+	useGeneratedKeys="true"
+	keyProperty="uidx"
+	>
+	
+	INSERT INTO planit.member (uid, upw, uname, uphonenum, uphoto)
+		VALUES (#{uid}, #{upw}, #{uname}, #{uphonenum}, #{uphoto})
+
+</insert>
+
+
+
+</mapper>
